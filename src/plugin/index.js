@@ -25,7 +25,7 @@ const { toHydrationLoadersApplied } = require('./reactPlugin/2-pageTransform')
 // https://github.com/slinkity/slinkity/issues/55
 const extensions = [
   {
-    extension: 'jsx',
+    extension: 'tsx',
     isTemplateFormat: true,
     isIgnoredFromIncludes: true,
   },
