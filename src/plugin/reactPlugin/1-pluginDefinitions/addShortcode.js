@@ -26,7 +26,7 @@ const argsArrayToPropsObj = function ({ vargs = [], errorMsg = '' }) {
 module.exports = function addShortcode(eleventyConfig, { componentAttrStore }) {
   eleventyConfig.addShortcode('react', function (componentPath, ...vargs) {
     const absComponentPath =
-      join(IMPORT_ALIASES.includes, componentPath) + (componentPath.endsWith('.jsx') ? '' : '.jsx')
+      join(IMPORT_ALIASES.includes, componentPath) + (componentPath.endsWith('.tsx') ? '' : '.tsx')
 
     const props = argsArrayToPropsObj({
       vargs,
