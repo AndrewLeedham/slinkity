@@ -15,7 +15,7 @@ function toAbsImport(inputPath) {
  * @param {AddPageExtParams}
  */
 module.exports = function addPageExtension(eleventyConfig, { componentAttrStore, viteSSR }) {
-  eleventyConfig.addExtension('jsx', {
+  eleventyConfig.addExtension('tsx', {
     read: false,
     getData: async (inputPath) => {
       const { frontMatter } = await viteSSR.toComponentCommonJSModule(toAbsImport(inputPath))
