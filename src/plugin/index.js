@@ -60,7 +60,7 @@ module.exports = function slinkityConfig({ dir, viteSSR, browserSyncOptions, env
     }
     root
       .querySelector('body')
-      .insertAdjacentHTML('beforeend', `<style>${Object.values(pageStyles).join('\n')}</style>`)
+      ?.insertAdjacentHTML('beforeend', `<style>${Object.values(pageStyles).join('\n')}</style>`)
 
     const routePath = '/' + toSlashesTrimmed(relative(dir.output, outputPath))
     return environment === 'dev'
